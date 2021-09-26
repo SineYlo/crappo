@@ -1,0 +1,669 @@
+/*|=============== OUT-OF-THE-BOX CSS SOLUTIONS ===============|*/
+/*|CM| Used to hide elements without breaking accessibility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+}
+
+/*|=============== STYLING THE BASIC ELEMENTS AND MIXES ===============|*/
+/*|CM| Elements like body, svg, path, etc. are usually found here. */
+.body {
+  font-family: var(--primary-font-family);
+  font-size: var(--text-size-base);
+  background-color: var(--primary-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  font-size: var(--text-size-medium);
+  font-weight: var(--second-font-weight);
+  color: var(--white-color);
+  line-height: var(--second-lh);
+  border-radius: var(--primary-br);
+  background-color: var(--third-color);
+  transition-property: color, background-color;
+  transition-duration: var(--normal-transition-duration);
+  transition-timing-function: ease-in-out;
+}
+
+.title {
+  font-size: var(--text-size-huge);
+  font-weight: var(--primary-font-weight);
+  line-height: var(--second-lh);
+}
+
+/*|EV| Describing CSS effects (such as - hover, active, focus)  */
+.btn:hover {
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
+/*|=============== STYLING THE MAIN ELEMENTS ===============|*/
+/*|CM| This is usually where the header, section, and footer styles are located */
+/*|=============== SITE HEADER ===============|*/
+.site-header__container {
+  display: flex;
+  align-items: center;
+  min-height: 172px;
+}
+
+.site-header__logo {
+  margin-right: 37.5%;
+}
+
+.site-header__nav {
+  width: min(100%, 28.25%);
+  margin-right: 4.66667%;
+}
+
+.site-header__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-header__link {
+  display: inline-block;
+  color: var(--white-color);
+  line-height: var(--primary-lh);
+  letter-spacing: .01rem;
+  transition: color var(--normal-transition-duration) ease-in-out;
+}
+
+.site-header__btns {
+  min-width: 221px;
+}
+
+.btns-header__login {
+  position: relative;
+  margin-right: 19.9095%;
+  color: var(--white-color);
+  line-height: var(--second-lh);
+  font-weight: var(--second-font-weight);
+  transition: color var(--normal-transition-duration) ease-in-out;
+}
+
+.btns-header__login::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -25px;
+  width: 1px;
+  height: 24px;
+  background-color: var(--second-color);
+  opacity: .3;
+}
+
+.btns-header__register {
+  min-width: 130px;
+  min-height: 52px;
+  padding: .875rem 2rem;
+  font-size: var(--text-size-base);
+  line-height: var(--second-lh);
+}
+
+/*|EV| Describing CSS effects (such as - hover, active, focus)  */
+.site-header__link:hover,
+.btns-header__login:hover {
+  color: var(--third-color);
+}
+
+/*|=============== SECTION HERO ===============|*/
+.section-hero__container {
+  min-height: 678px;
+  padding-top: 4.4375rem;
+  background: var(--second-bgi) 598px -9px no-repeat;
+}
+
+.section-hero__promo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 365px;
+  min-height: 40px;
+  margin-bottom: 1.5rem;
+  padding: .25rem .6875rem .25rem .25rem;
+  border-radius: var(--primary-br);
+  background-color: var(--fourth-color);
+}
+
+.promo-hero__save {
+  min-width: 113px;
+  padding: .25rem 1rem;
+  background-color: var(--white-color);
+  border-radius: var(--primary-br);
+}
+
+.save-hero__text {
+  display: inline-block;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: var(--second-font-weight);
+  line-height: var(--second-lh);
+  letter-spacing: .03rem;
+}
+
+.promo-hero__text {
+  color: var(--white-color);
+  line-height: var(--primary-lh);
+  letter-spacing: .01rem;
+}
+
+.section-hero__title {
+  max-width: 586px;
+  margin-bottom: 1.5rem;
+  font-size: var(--text-size-max-tiny);
+  font-weight: var(--primary-font-weight);
+  color: var(--white-color);
+  line-height: 4.75rem;
+}
+
+.section-hero__desc {
+  max-width: 433px;
+  margin-bottom: 2rem;
+  line-height: var(--primary-lh);
+  color: var(--fifth-color);
+  letter-spacing: .01rem;
+}
+
+.section-hero__btn {
+  min-width: 154px;
+  min-height: 59px;
+  padding: 1rem 1.5rem;
+}
+
+/*|=============== SECTION WHY ===============|*/
+.section-why__container {
+  min-height: 308px;
+  padding-top: 6.25rem;
+}
+
+.section-why__list {
+  display: grid;
+  grid-template: minmax(92px, auto) / repeat(3, minmax(auto, 334px));
+  grid-auto-rows: minmax(92px, auto);
+  gap: var(--primary-gap);
+}
+
+.section-why__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 6.5625rem;
+}
+
+.section-why__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: var(--third-br);
+  background-color: var(--fourth-color);
+}
+
+.section-why__item_chart {
+  background: var(--twelfth-bgi) 24px 24px no-repeat;
+}
+
+.section-why__item_people {
+  background: var(--fourteenth-bgi) 20px 20px no-repeat;
+}
+
+.section-why__item_countries {
+  background: var(--thirteenth-bgi) 20px 20px no-repeat;
+}
+
+.item-why__emphasis {
+  margin-bottom: .25rem;
+  font-size: var(--text-size-huge);
+  font-weight: var(--primary-font-weight);
+  line-height: var(--second-lh);
+  color: var(--white-color);
+}
+
+.item-why__text {
+  line-height: var(--primary-lh);
+  letter-spacing: .01rem;
+  color: var(--fifth-color);
+}
+
+/*|=============== SECTION CALCULATE ===============|*/
+.section-calculate__container {
+  min-height: 457px;
+  padding-top: 6.25rem;
+}
+
+.section-calculate__title {
+  margin-bottom: 1.5rem;
+  color: var(--white-color);
+  text-align: center;
+}
+
+.section-calculate__desc {
+  max-width: 622px;
+  margin: 0 auto;
+  font-size: var(--text-size-medium);
+  line-height: var(--second-lh);
+  color: var(--fifth-color);
+  text-align: center;
+}
+
+/*|=============== SECTION TRADE ===============|*/
+.section-trade {
+  background: linear-gradient(180deg, var(--thirteenth-color) 0%, var(--fourteenth-color) 100%);
+}
+
+.section-trade__container {
+  position: relative;
+  min-height: 1033px;
+  padding-top: 19.75rem;
+}
+
+.section-trade__calculator {
+  position: absolute;
+  top: -155px;
+  left: 129px;
+  width: min(100%, 942px);
+  min-height: 371px;
+  border-radius: var(--second-br);
+  box-shadow: 0 20px 200px var(--twelfth-color);
+}
+
+.calculator-trade__top {
+  display: flex;
+  align-items: center;
+  min-height: 155px;
+  padding: 3rem;
+  border-radius: var(--second-br) var(--second-br) 0 0;
+  background-color: var(--fifteenth-color);
+}
+
+.top-calculator_hash {
+  width: min(100%, 403px);
+  min-height: 38px;
+  margin-right: 3rem;
+  border-bottom: 1px solid var(--fifth-color);
+  font-size: var(--text-size-big);
+  color: var(--primary-color);
+  line-height: var(--second-lh);
+}
+
+.top-calculator_hash::placeholder {
+  color: var(--primary-color);
+}
+
+.top-calculator__unit {
+  width: min(100%, 200px);
+  min-height: 38px;
+  margin-right: 3rem;
+  padding-left: .5rem;
+  border-bottom: 1px solid var(--fifth-color);
+  font-size: var(--text-size-big);
+  color: var(--primary-color);
+  line-height: var(--second-lh);
+  background: var(--primary-bgi) 186px 9px no-repeat;
+}
+
+.top-calculator__btn {
+  min-width: 146px;
+  min-height: 59px;
+  padding: 1rem 1.9375rem 1rem 2rem;
+}
+
+.calculator-trade__bottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.calculator-trade__bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--primary-br);
+  mix-blend-mode: overlay;
+  box-shadow: 0 80px 40px var(--eleventh-color);
+}
+
+.bottom-calculator__interval {
+  margin-bottom: 1rem;
+  font-weight: var(--second-font-weight);
+  line-height: var(--second-lh);
+  text-transform: uppercase;
+  letter-spacing: .04rem;
+  color: var(--third-color);
+}
+
+.bottom-calculator__income {
+  margin-bottom: .25rem;
+  font-size: var(--text-size-large);
+  font-weight: var(--primary-font-weight);
+  line-height: var(--second-lh);
+  letter-spacing: .04rem;
+  color: var(--primary-color);
+}
+
+.income-calculator__dollars {
+  color: var(--third-color);
+}
+
+.bottom-calculator__desc {
+  line-height: var(--primary-lh);
+  letter-spacing: .01rem;
+  color: var(--sixth-color);
+}
+
+.section-trade__title {
+  max-width: 741px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.section-trade__list {
+  display: grid;
+  grid-template: minmax(433px, auto) / repeat(3, minmax(auto, 370px));
+  grid-auto-rows: minmax(433px, auto);
+  gap: var(--second-gap);
+}
+
+.section-trade__item {
+  position: relative;
+  padding: 11rem 1.5rem 3rem;
+  border-radius: var(--second-br);
+  cursor: pointer;
+  transition: background-color var(--normal-transition-duration) ease-in-out;
+}
+
+.section-trade__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  box-shadow: 0 40px 40px var(--eleventh-color);
+  mix-blend-mode: overlay;
+}
+
+.section-trade__item_bitcoin {
+  background: var(--white-color) var(--ninth-bgi) 145px 48px no-repeat;
+}
+
+.section-trade__item_ethereum {
+  background: var(--white-color) var(--tenth-bgi) 141px 48px no-repeat;
+}
+
+.section-trade__item_litecoin {
+  background: var(--white-color) var(--eleventh-bgi) 141px 48px no-repeat;
+}
+
+.item-trade__name {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.name-trade__title {
+  margin-right: .5rem;
+  font-size: var(--text-size-large);
+  font-weight: var(--primary-font-weight);
+  line-height: var(--second-lh);
+  color: var(--primary-color);
+  transition: color var(--normal-transition-duration) ease-in-out;
+}
+
+.name-trade__title_bitcoin {
+  padding-left: 5.125rem;
+}
+
+.name-trade__title_ethereum {
+  padding-left: 3.6875rem;
+}
+
+.name-trade__title_litecoin {
+  padding-left: 4.75rem;
+}
+
+.name-trade__shortened {
+  padding-top: .6875rem;
+  text-transform: uppercase;
+  font-size: var(--text-size-medium);
+  font-weight: var(--second-font-weight);
+  line-height: var(--second-lh);
+  color: var(--eighth-color);
+  transition-property: color, opacity;
+  transition-duration: var(--normal-transition-duration);
+  transition-timing-function: ease-in-out;
+}
+
+.item-trade__desc {
+  margin-bottom: 1.5625rem;
+  text-align: center;
+  color: var(--sixth-color);
+  line-height: var(--primary-lh);
+  letter-spacing: .01rem;
+  transition: color var(--normal-transition-duration) ease-in-out;
+}
+
+.item-trade__btn {
+  position: relative;
+  left: 50%;
+  min-width: 64px;
+  min-height: 64px;
+  transform: translateX(-50%);
+}
+
+.item-trade__btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  border: 2px solid var(--ninth-color);
+  border-radius: var(--third-br);
+  background: var(--eighth-bgi) center no-repeat;
+  z-index: var(--primary-z);
+  transition-property: transform, border-color, background-color;
+  transition-duration: var(--normal-transition-duration);
+  transition-timing-function: ease-in-out;
+}
+
+.item-trade__btn::after {
+  content: "Start mining";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: inline-block;
+  min-width: 205px;
+  min-height: 64px;
+  padding: 1.15625rem 1.5rem;
+  font-size: var(--text-size-medium);
+  line-height: var(--second-lh);
+  color: var(--white-color);
+  border-radius: var(--primary-br);
+  background-color: var(--third-color);
+  opacity: 0;
+  transition: opacity var(--normal-transition-duration) ease-in-out;
+}
+
+/*|EV| Describing CSS effects (such as - hover, active, focus)  */
+.section-trade__item:hover {
+  background-color: var(--seventh-color);
+}
+
+.section-trade__item:hover .name-trade__title {
+  color: var(--white-color);
+}
+
+.section-trade__item:hover .name-trade__shortened {
+  color: var(--white-color);
+  opacity: .7;
+}
+
+.section-trade__item:hover .item-trade__desc {
+  color: var(--white-color);
+}
+
+.section-trade__item:hover .item-trade__btn::before {
+  border-color: var(--white-color);
+  background-color: var(--white-color);
+  transform: scale(.5) translateX(240%);
+}
+
+.section-trade__item:hover .item-trade__btn::after {
+  opacity: 1;
+}
+
+/*|=============== SECTION START ===============|*/
+.section-start {
+  background: linear-gradient(180deg, var(--seventh-color) 0%, var(--primary-color) 100%);
+}
+
+.section-start__container {
+  padding: 5.5rem 0;
+  min-height: 392px;
+}
+
+.section-start__content {
+  display: flex;
+  justify-content: space-between;
+  min-height: 216px;
+  padding: 3rem;
+  border-radius: var(--second-br);
+  background-color: var(--third-color);
+}
+
+.left-start__title {
+  margin-bottom: 1rem;
+  font-size: var(--text-size-large);
+  font-weight: var(--primary-font-weight);
+  line-height: var(--second-lh);
+  color: var(--white-color);
+}
+
+.left-start__desc {
+  max-width: 348px;
+  line-height: var(--primary-lh);
+  color: var(--white-color);
+}
+
+.content-start__right {
+  width: min(100%, 566px);
+  padding-top: 1.75rem;
+}
+
+.right-start__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 55px;
+}
+
+.form-start__email {
+  width: min(100%, 374px);
+  min-height: 35px;
+  border-bottom: 1px solid var(--tenth-color);
+  line-height: var(--primary-lh);
+  letter-spacing: .01rem;
+  color: var(--white-color);
+}
+
+.form-start__email::placeholder {
+  color: inherit;
+}
+
+.form-start__btn {
+  min-width: 152px;
+  min-height: 55px;
+  padding: .875rem 2rem;
+  font-size: var(--text-size-medium);
+  font-weight: var(--second-font-weight);
+  line-height: var(--second-lh);
+  color: var(--primary-color);
+  border-radius: var(--primary-br);
+  background-color: var(--white-color);
+  transition-property: background-color, color;
+  transition-duration: var(--normal-transition-duration);
+  transition-timing-function: ease-in-out;
+}
+
+/*|EV| Describing CSS effects (such as - hover, active, focus)  */
+.form-start__btn:hover {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+/*|=============== SITE FOOTER ===============|*/
+.site-footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 180px;
+}
+
+.site-footer__copy {
+  line-height: var(--primary-lh);
+  color: var(--white-color);
+  letter-spacing: .01rem;
+}
+
+.site-footer__list {
+  display: flex;
+  justify-content: space-between;
+  width: min(100%, 248px);
+}
+
+.site-footer__item {
+  height: 24px;
+}
+
+.site-footer__link {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  transition: opacity var(--normal-transition-duration) ease-in-out;
+}
+
+.site-footer__link_fb {
+  background: var(--third-bgi) 0 0 no-repeat;
+}
+
+.site-footer__link_inst {
+  background: var(--fourth-bgi) 0 0 no-repeat;
+}
+
+.site-footer__link_yt {
+  background: var(--fifth-bgi) 0 0 no-repeat;
+}
+
+.site-footer__link_tw {
+  background: var(--sixth-bgi) 0 0 no-repeat;
+}
+
+.site-footer__link_in {
+  background: var(--seventh-bgi) 0 0 no-repeat;
+}
+
+/*|EV| Describing CSS effects (such as - hover, active, focus)  */
+.site-footer__link:hover {
+  opacity: .5;
+}

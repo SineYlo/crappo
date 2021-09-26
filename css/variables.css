@@ -1,0 +1,89 @@
+/*|=============== VARIABLES ===============|*/
+:root {
+
+  /*|========== FONT-FAMILY ==========|*/
+  /*|CM| Main font-family */
+  --primary-font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /*|========== COLOR ==========|*/
+  /*|CM| Change favorite color (Oxford Blue - 240) */
+  --hue-color: 240;
+  /*|CM| HSL color mode */
+  --primary-color: hsl(var(--hue-color) 54% 11%);
+  --second-color: hsl(0 0% 95%);
+  --third-color: hsl(220 80% 56%);
+  --fourth-color: hsl(0 0% 100% / .1);
+  --fifth-color: hsl(0 0% 88%);
+  --sixth-color: hsl(0 0% 51%);
+  --seventh-color: hsl(261 88% 23%);
+  --eighth-color: hsl(0 0% 74%);
+  --ninth-color: hsl(261 88% 23% / .2);
+  --tenth-color: hsl(0 0% 100% / .4);
+  --eleventh-color: hsl(261 68% 28%);
+  --twelfth-color: hsl(261 68% 28% / .05);
+  --thirteenth-color: hsl(220 27% 98%);
+  --fourteenth-color: hsl(228 100% 99%);
+  --fifteenth-color: hsl(220 60% 99%);
+  /*|CM| Universal colors */
+  --white-color: hsl(0 0% 100%);
+  --black-color: hsl(0 100% 0%);
+
+  /*|========== FONT-WEIGHT ==========|*/
+  /*|CM| Main font-weight */
+  --primary-font-weight: 700;
+  /*|CM| Additional font-weights */
+  --second-font-weight: 500;
+
+  /*|========== FONT-SIZE ==========|*/
+  /*|CM| Base font-size ( .5rem = 8px, 1rem = 16px, 1.5rem = 24px ...) */
+  --text-size-base: 1rem;
+  /*|CM| Different font-size options */
+  --text-size-medium: calc(var(--text-size-base) + .125rem);
+  --text-size-big: calc(var(--text-size-base) + .25rem);
+  --text-size-large: calc(var(--text-size-base) + 1rem);
+  --text-size-huge: calc(var(--text-size-base) + 1.5rem);
+  --text-size-max-tiny: calc(var(--text-size-base) + 3rem);
+
+  /*|========== LINE-HEIGHT ==========|*/
+  /*|CM| Main line-height */
+  --primary-lh: 1.75;
+  /*|CM| Additional lines-heights */
+  --second-lh: 1.5;
+
+  /*|========== BORDER-RADIUS ==========|*/
+  /*|CM| Main border-radius */
+  --primary-br: 32px;
+  /*|CM| Additional border-radiuses */
+  --second-br: 16px;
+  --third-br: 50%;
+
+  /*|========== BACKGROUND IMAGE ==========|*/
+  /*|CM| All background pictures are located here */
+  --primary-bgi: url("../images/general/arrow_bottom.svg");
+  --second-bgi: url("../images/general/hero_picture.svg");
+  --third-bgi: url("../images/social/facebook_logo.svg");
+  --fourth-bgi: url("../images/social/instagram_logo.svg");
+  --fifth-bgi: url("../images/social/linkedin_logo.svg");
+  --sixth-bgi: url("../images/social/twitter_logo.svg");
+  --seventh-bgi: url("../images/social/youtube_logo.svg");
+  --eighth-bgi: url("../images/trade/arrow_right.svg");
+  --ninth-bgi: url("../images/trade/bitcoin.svg");
+  --tenth-bgi: url("../images/trade/ethereum.svg");
+  --eleventh-bgi: url("../images/trade/litecoin.svg");
+  --twelfth-bgi: url("../images/why/bar_chart.svg");
+  --thirteenth-bgi: url("../images/why/earth.svg");
+  --fourteenth-bgi: url("../images/why/person.svg");
+
+  /*|========== GAP ==========|*/
+  /*|CM| Specify the same indentation between blocks */
+  --primary-gap: 99px;
+  --second-gap: 45px;
+
+  /*|========== TRANSITION ==========|*/
+  /*|CM| Duration of effects (most effective .2 to .4s) */
+  --normal-transition-duration: .3s;
+
+  /*|========== Z-INDEX ==========|*/
+  /*|CM| Main z-index */
+  --primary-z: 2;
+}
